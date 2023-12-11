@@ -1,5 +1,11 @@
 Link to the project I'm referring to: https://github.com/Oddlem/Oddlem/blob/main/toughnessquiz.py
 
+----------------------------------------------------------------------------------------------------------------------------------
+Dec 11 2023
+I've updated the quiz to include Object Oriented Programming. I turned each question into a class, allowing me to streamline each individual question and make the process of creating _A_ question much more efficient (and not just copy/paste each line). This also means that I could create more quizzed if I wanted to! 
+
+----------------------------------------------------------------------------------------------------------------------------------
+
 Hi! This is my first ACTUAL python project, wherein I needed to code everything from scratch! This means I didn't use any tutorials, this was me and some syntax help from friends.
 
 Because this was entirely from scratch, you might notice that this looks pretty messy. Luckily, I'm planning on continuously updating this which I hope will show my improvement! 
