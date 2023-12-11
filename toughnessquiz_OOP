@@ -1,0 +1,84 @@
+# Updated the quiz's functionality by using Object Oriented Programming to construct each question
+
+
+# To-do list:
+# 1. create a function that lets me easily enter in new questions
+# 2. create a function that automatically tallies the score, AND allows the right answer to be changed
+# that's it for now!!! but that IS the majority of the quiz, and that should make things MUCH more readable + efficient
+# This will also allow me to make OTHER quizzes... HMMMM!! HMMMMMMM!!!!!
+userscore = 0
+quizanswers = ["1", "2", "3", "4"]
+
+class Question:
+    def __init__(self, answer, title, options):
+        self.title = title
+        self.options = options
+        self.answer = str(answer)
+    def question_meat(self):
+        while True:
+            print(self.title)
+            for option in self.options:
+                print(option)
+            userinput = input("\nSelect your ANSWER!!!! SCUM\n\n")
+            if not userinput in quizanswers:
+                print("THAT'S... NOT!!! A VALID... ANSWER!!!!!!!!!!!!!!!!!!!!!!!!! twy again! :)")
+                continue
+            if userinput == self.answer:
+                return True
+            else:
+                return False
+
+# cycle through each question, but make it so that I can change how each one appears! 
+# I think it might make more sense to make this a class and not a function. I think this might just be a matter of preference
+# but for me, it would keep things more organized to make each question an object of a question class rather than doing functions
+
+while True:
+    question1 = Question(1, "========= 1. What do you eat for BREAKFAST in the MORNING =========\n", ["1. I eat NAILS for breakfast.\n", "2. I eat cereal... :) LIKE A WIMP!!!\n", "3. raw eggs.\n", "4. I don't eat anything...\n"])
+    if question1.question_meat():
+        userscore += 1
+    question2 = Question(2, "========= 2. What genre do you LIKE the BEST? =========\n", ["1. ERmmm ermmmm... I don't listen to music.\n", "2. My enemies' bones snapping.\n", "3. Pop!\n", "4. Game soundtrack.\n"])
+    if question2.question_meat():
+        userscore += 1
+    question3 = Question(2, "========= 3. Do you like quizzes? =========\n", ["1. I LOVEEEE quizzessss!\n", "2. I HATE QUIZZES.\n", "3. I'm neutral about quizzes.\n", "4. raw eggs\n"])
+    if question3.question_meat():
+        userscore += 1
+    question4 = Question(1, "========= 4. What car do you drive? =========\n", ["1. A TANK.\n", "2. A normal car.\n", "3. I don't drive... :(\n", "4. I break into other peoples' cars.\n"])
+    if question4.question_meat():
+        userscore += 1
+    question5 = Question(4, "========= 5. How many pushups can you do? =========\n", ["1. Zero, I'M WEAK!!!\n", "2. Maybe 20?\n", "3. 40! Confidently!\n", "4. If I do a pushup... the WORLD will explode cause I'm so strong. \n"])
+    if question5.question_meat():
+        userscore += 1
+    question6 = Question(2, "========= 6. What are your hobbies? =========\n", ["1. Rock climbing.\n", "2. Shooting an RPG-28.\n", "3. Doing jigsaw puzzles.\n", "4. Jogging.\n"])
+    if question6.question_meat():
+        userscore += 1
+    question7 = Question(4, "========= 7. What PETS do you own? =========\n", ["1. NONE!!!\n", "2. Cat(s).\n", "3. Dog(s).\n", "4. My enemies.\n"])
+    if question7.question_meat():
+        userscore += 1
+    question8 = Question(2, "========= 8. What's the meaning of life? =========\n", ["1. To have a happy and satisfying time on Earth.\n", "2. WAR!!!!!\n", "3. raw eggs.\n", "4. Ermmm ummm never thought about it!!\n"])
+    if question8.question_meat():
+        userscore += 1
+    question9 = Question(3, "Hmmm... \n", ["1. Excuse me?\n", "2. Hmmmm?\n", "3. SPEAK UP I CAN'T HEAR YOU!!!!!!\n", "4. ...What?\n"])
+    if question9.question_meat():
+        userscore += 1
+    question10 = Question(1, "========= 10. Do you like meeeee? :) =========\n", ["1. NO. I HATE YOU.\n", "2. Yea!\n", "3. Sorry I was distracted what did you say?\n", "4. -stare longingly into the scary sargent's eyes and twirl your hair around like a schoolgirl-\n"])
+    if question10.question_meat():
+        userscore += 1
+    break
+
+print("Very good!!! Um.. s-sSARGENT. Here's your score!!! :)")
+print("======================================================")
+
+percentage = 100 * userscore/10
+print(percentage)
+if percentage <= 10:
+    print("Absolutely disgusting. You might as well be A SLUG.")
+elif percentage <= 25:
+    print("You're actually REALLY weak... REALLY weak!! MADE OF GLASS!!!!!")
+elif percentage <= 50:
+    print("Decent... maybe drink more milk and you can get buff like ME.")
+elif percentage <= 75:
+    print("...Yes very good. You're clearly pretty tough, but there's room for improvement.")
+elif percentage <= 85:
+    print("EXCELENT!! You, sir, are tough.")
+elif percentage <= 100:
+    print("You're the peak of human evolution, incredible.")
